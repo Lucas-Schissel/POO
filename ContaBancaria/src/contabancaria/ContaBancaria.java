@@ -1,21 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//Lucas Schissel - POO1 - 2020.1
+
 package contabancaria;
 
-/**
- *
- * @author Cliente
- */
+
 public class ContaBancaria {
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String[] args) {
-        // TODO code application logic here
+ 
+        Conta Lucas = new Conta();
+        Lucas.titular = "Lucas Schissel";
+        Lucas.agencia = 228;
+        Lucas.numero = 199620;
+        Lucas.saldo = 8534.50;
+        Lucas.dataabertura = "20/05/2018";
+        
+        String retornaDados = Lucas.retornaDados();
+        System.out.print(retornaDados);
     }
     
 }
