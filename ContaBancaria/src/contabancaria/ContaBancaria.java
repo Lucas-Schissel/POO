@@ -12,11 +12,18 @@ public class ContaBancaria {
         Lucas.titular = "Lucas Schissel";
         Lucas.agencia = 228;
         Lucas.numero = 199620;
-        Lucas.saldo = 8534.50;
+        Lucas.saldo = 10000.50;
         Lucas.dataabertura = "20/05/2018";
         
-        String retornaDados = Lucas.retornaDados();
-        System.out.print(retornaDados);
+        Lucas.retornaDados();        
+        Lucas.sacarConta(1000.50);
+        Lucas.retornaDados();
+        Lucas.depositarConta(3000.00);
+        Lucas.retornaDados(); 
+        Lucas.rendimentoConta(0.02);
+        Lucas.retornaDados(); 
+        
+
     }
     
 }

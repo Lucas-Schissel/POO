@@ -13,13 +13,26 @@ public class Conta {
     double saldo;
     String dataabertura;
     
-    public String retornaDados(){
-        return "\nTitular: " + this.titular
-             + "\nNumero: " + this.numero 
-             + "\nAgencia: " + this.agencia
-             + "\nSaldo:   " + this.saldo
-             + "\nData Abertura:" + this.dataabertura
-             + "\n";
+    public void retornaDados(){
+        System.out.printf("\nTitular: " + this.titular
+                         + "\nNumero: " + this.numero 
+                         + "\nAgencia: " + this.agencia
+                         + "\nSaldo:   " + this.saldo
+                         + "\nData Abertura:" + this.dataabertura
+                         + "\n");
     }
+    
+    public void sacarConta(double valor){
+        this.saldo = this.saldo - valor;   
+    }
+    
+    public void depositarConta(double valor){
+        this.saldo = this.saldo + valor;  
+    }
+    
+    public void rendimentoConta(double taxa){
+        this.saldo = this.saldo * (1 + taxa);  
+    }
+    
     
 }
