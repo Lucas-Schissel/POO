@@ -12,9 +12,21 @@ public class TestaCaneta {
         A.carga = 100;
         A.estado = true;
         
+        Caneta B  = new Caneta();
+        B.modelo = "FaberCastel";
+        B.cor = "Vermelha";
+        B.ponta = 0.5;
+        B.carga = 80;
+        B.estado = true;
+        
         A.rabiscar();
         A.destampar();
         A.rabiscar();
         A.tampar();
+        
+        B.rabiscar();
+        B.destampar();
+        B.rabiscar();
+        B.tampar();
     }
 }

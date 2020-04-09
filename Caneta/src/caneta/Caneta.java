@@ -10,7 +10,7 @@ public class Caneta {
     
     public void rabiscar(){
         if(estado == true){ 
-          System.out.printf("Destampe a caneta " + this.modelo +"/"+ this.cor +"/"+ this.ponta +" para rabiscar\n");
+          System.out.printf("\nDestampe a caneta " + this.modelo +"/"+ this.cor +"/"+ this.ponta +" para rabiscar\n");
         }else{
           System.out.printf("Pode escrever com a caneta " + this.modelo +"/"+ this.cor +"/"+ this.ponta+"\n");   
         }
