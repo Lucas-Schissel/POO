@@ -2,11 +2,19 @@
 package caneta;
 
 public class Caneta {
-    String modelo;
-    String cor;
-    double ponta; 
-    int carga;
-    boolean estado;
+    private String modelo;
+    private String cor;
+    private double ponta; 
+    private int carga;
+    private boolean estado;
+    
+    public void adicionaCaneta(String m,String c,double p,int g,boolean e){
+        this.modelo = m;
+        this.cor = c;
+        this.ponta = p;
+        this.carga = g;
+        this.estado = e;
+    }
     
     public void rabiscar(){
         if(estado == true){ 

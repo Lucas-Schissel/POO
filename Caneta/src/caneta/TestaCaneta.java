@@ -6,18 +6,17 @@ public class TestaCaneta {
     
     public static void main(String[] args) {
         Caneta A  = new Caneta();
-        A.modelo = "Bic";
-        A.cor = "Azul";
-        A.ponta = 1.5;
-        A.carga = 100;
-        A.estado = true;
+        String marca1 = "BIC";
+        String cor1 = "Azul";
+        
+        A.adicionaCaneta(marca1,cor1,1.5,100, true);       
         
         Caneta B  = new Caneta();
-        B.modelo = "FaberCastel";
-        B.cor = "Vermelha";
-        B.ponta = 0.5;
-        B.carga = 80;
-        B.estado = true;
+        String marca2 = "FaberCastel";
+        String cor2 = "Vermelha";
+        
+        A.adicionaCaneta(marca2,cor2,2.0,90, true);  
+       
         
         A.rabiscar();
         A.destampar();
