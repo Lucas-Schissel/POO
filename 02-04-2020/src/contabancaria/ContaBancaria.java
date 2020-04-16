@@ -2,6 +2,7 @@
 
 package contabancaria;
 
+import static com.sun.org.apache.xalan.internal.lib.ExsltDatetime.date;
 
 public class ContaBancaria {
 
@@ -9,11 +10,10 @@ public class ContaBancaria {
     public static void main(String[] args) {
  
         Conta Lucas = new Conta();
-        Lucas.titular = "Lucas Schissel";
-        Lucas.agencia = 228;
-        Lucas.numero = 199620;
-        Lucas.saldo = 10000.50;
-        Lucas.dataabertura = "20/05/2018";
+        String nome = "Lucas Schissel";
+        String data = date();
+        
+        Lucas.adicionaConta(nome,228,199620,10000.50,data);
         
         Lucas.retornaDados();        
         Lucas.sacarConta(1000.50);
