@@ -7,11 +7,11 @@ package contabancaria;
 //Classe Conta e sua funçoes
 public class Conta {
     
-    String titular;
-    int numero;
-    int agencia;
-    double saldo;
-    String dataabertura;
+    private String titular;
+    private int numero;
+    private int agencia;
+    private double saldo;
+    private String dataabertura;
     
     public void retornaDados(){
         System.out.printf("\nTitular: " + this.titular
@@ -20,6 +20,14 @@ public class Conta {
                          + "\nSaldo:   " + this.saldo
                          + "\nData Abertura:" + this.dataabertura
                          + "\n");
+    }
+    
+    public void adicionaConta(String t,int n,int a,double s,String d){
+        this.titular = t;
+        this.numero = n;
+        this.agencia = a;
+        this.saldo = s;
+        this.dataabertura = d;
     }
     
     public void sacarConta(double valor){
