@@ -5,18 +5,23 @@ public class Data{
     private int dia;
     private int mes;
     private int ano;
-
-    public void setData(int d,int m,int a) {
-       /* A verificaçao Inicial verifica se os numeros estao dentro do esperado, dias entre 1 e 31 , 
+    
+        /* A verificaçao Inicial verifica se os numeros estao dentro do esperado, dias entre 1 e 31 , 
         mes entre 1 e 12 , ano maior que 0, só depois passando para um verificaçao especifica*/
-        if((d > 0 && d <32) && (m > 0 && m < 12) && (a>0)){
-            if(verificaDia(d,m,a)==true)
+    public void setData(int d,int m,int a) {
+         if((d > 0 && d <32) && (m > 0 && m < 12) && (a>0)){
+            if(verificaDia(d,m,a)==true){
                 setDia(d);
                 setMes(m);
                 setAno(a);
+            System.out.printf("Data valida!\n");
             }else{
-            System.out.printf("Data Invalida!\n");  
-        }               
+            System.out.printf("Data Invalida!\n");
+            }   
+        
+        }else{
+            System.out.printf("Dados Invalidos!\n");
+        }
     }
     
     /*A funçao verificaDia recebe dia, mes e ano, como parametro e verifica a relaçao de dia com o mes
@@ -84,10 +89,14 @@ public class Data{
     }
     
     public void getData(){
-        System.out.printf("\nDia: " + this.dia
-                         + "\nMes: " + this.mes
-                         + "\nAno: " + this.ano
-                         + "\n");
+        if((this.dia != 0) && (this.mes !=0 ) && (this.ano != 0)){
+            System.out.printf("Dia: " + this.dia
+                            + "\nMes: " + this.mes
+                            + "\nAno: " + this.ano
+                            + "\n\n");
+        }else{
+            System.out.printf("Nao é possivel buscar essa data:\n");
+        }
     }       
 
     public int getDia() {

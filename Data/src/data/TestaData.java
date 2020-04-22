@@ -14,9 +14,9 @@ public class TestaData {
         Data teste2 = new Data();
         
         teste1.setData(29,2,2016);
-        teste2.setData(29,2,2019); 
+        teste1.getData(); 
         
-        teste1.getData();    
+        teste2.setData(29,0,2019);      
         teste2.getData();
     }
     
