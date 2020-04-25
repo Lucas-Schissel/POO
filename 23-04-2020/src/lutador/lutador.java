@@ -1,16 +1,16 @@
 //Lucas Schissel - POO1 - 2020.1
 package lutador;
 
-public class lutador {
-    private String nome;
-    private String nacionalidade;
-    private int idade;
-    private double altura;
-    private double peso;
-    private String categoria;
-    private int vitorias;
-    private int derrotas;
-    private int empates;
+public class lutador{
+    private String nome="";
+    private String nacionalidade="";
+    private int idade=0;
+    private double altura=0;
+    private double peso=0;
+    private String categoria="";
+    private int vitorias=0;
+    private int derrotas=0;
+    private int empates=0;
     
     public lutador(String no, String na, int id, double al, double ps, int vt, int dr, int ep){
         setNome(no);
@@ -29,55 +29,58 @@ public class lutador {
             setCategoria("Invalido");
         }else if(peso <= 70.3){
             setCategoria("Leve");
-        }else if(peso < 83.9){
+        }else if(peso <= 83.9){
             setCategoria("Médio");
-        }else if(peso < 120.2){
+        }else if(peso <= 120.2){
             setCategoria("Pesado");
+        }else{
+            setCategoria("Invalido");
         }
     }
     
     public void apresentar(){
         System.out.printf("\nNome: " + getNome()
-                         + "\nPeso:" + getPeso()
-                         + "\nCategorias:" + getCategoria()
-                         + "\nVitorias:" + getVitorias()
-                         + "\nDerrotas:" + getDerrotas()
-                         + "\nEmpates:" + getEmpates()
+                         + "\nCategorias: " + getCategoria()
+                         + "\nVitorias: " + getVitorias()
+                         + "\nDerrotas: " + getDerrotas()
+                         + "\nEmpates: " + getEmpates()
                          + "\n");
-        System.out.printf("-----------------------------------------------------\n");
+        System.out.printf("------------------------------------------------------\n");
     }
     
     public void status(){
         System.out.printf("\nNome: " + getNome()
-                         + "\nNacionalidade" + getNacionalidade()
+                         + "\nNacionalidade: " + getNacionalidade()
                          + "\nIdade: " + getIdade()
-                         + "\nAltura:   " + getAltura()
-                         + "\nPeso:" + getPeso()
-                         + "\nVitorias:" + getVitorias()
-                         + "\nDerrotas:" + getDerrotas()
-                         + "\nEmpates:" + getEmpates()
+                         + "\nAltura: " + getAltura()
+                         + "\nPeso: " + getPeso()
+                         + "\nVitorias: " + getVitorias()
+                         + "\nDerrotas: " + getDerrotas()
+                         + "\nEmpates: " + getEmpates()
                          + "\n");
-        System.out.printf("-----------------------------------------------------\n");
+        System.out.printf("------------------------------------------------------\n");
         
     }
     
     public void ganharLuta(){
-        setVitorias(getVitorias()+1);
+        int n = getVitorias()+1;
+        setVitorias(n);
     }
     
     public void perderLuta(){
-        setDerrotas(getDerrotas()+1);
-        
+        int n = getDerrotas()+1;
+        setDerrotas(n);   
     }
     
     public void empatarLuta(){
-        setEmpates(getEmpates()+1);
+        int n = getEmpates()+1;
+        setEmpates(n);
     }
     
     
     //Getter e Setters
 
-    private String getNome() {
+    public String getNome() {
         return nome;
     }
 
@@ -85,7 +88,7 @@ public class lutador {
         this.nome = nome;
     }
 
-    private String getNacionalidade() {
+    public String getNacionalidade() {
         return nacionalidade;
     }
 
@@ -93,7 +96,7 @@ public class lutador {
         this.nacionalidade = nacionalidade;
     }
 
-    private int getIdade() {
+    public int getIdade() {
         return idade;
     }
 
@@ -101,7 +104,7 @@ public class lutador {
         this.idade = idade;
     }
 
-    private double getAltura() {
+    public double getAltura() {
         return altura;
     }
 
@@ -109,7 +112,7 @@ public class lutador {
         this.altura = altura;
     }
 
-    private double getPeso() {
+    public double getPeso() {
         return peso;
     }
 
@@ -118,7 +121,7 @@ public class lutador {
         setarCategoria();
     }
 
-    private String getCategoria() {
+    public String getCategoria() {
         return categoria;
     }
     
