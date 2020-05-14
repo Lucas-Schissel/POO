@@ -139,6 +139,7 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
 
+        display.setEditable(false);
         display.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 displayActionPerformed(evt);
